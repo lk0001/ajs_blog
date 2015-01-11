@@ -51,7 +51,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'fuubar', require: false
 
-  gem 'pry'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -62,4 +62,8 @@ group :development do
   gem 'quiet_assets'
 
   gem 'bullet' # find n+1 queries
+end
+
+group :production do
+  gem 'rails_12factor'
 end
