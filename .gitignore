@@ -35,3 +35,5 @@ bower.json
 
 # carrierwave uploads
 public/uploads/
+
+config/database.yml
