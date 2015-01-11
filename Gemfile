@@ -41,6 +41,14 @@ gem 'unicorn-rails'
 
 gem 'roar-rails'
 
+gem 'rails-assets-lodash'
+gem 'rails-assets-angular'
+gem 'rails-assets-angular-cache'
+gem 'rails-assets-angular-ui-router'
+gem 'rails-assets-angular-resource'
+gem 'rails-assets-angular-translate'
+gem 'rails-assets-angular-foundation'
+
 gem 'haml-rails'
 gem 'haml_coffee_assets', github: 'netzpirat/haml_coffee_assets'
 
