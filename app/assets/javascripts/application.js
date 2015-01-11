@@ -12,8 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lodash
+//= require angular
+//= require angular-cache
+//= require angular-ui-router
+//= require angular-resource
+//= require angular-translate
+//= require angular-foundation
 //= require foundation
-//= require_tree .
+//= require_tree ./helpers
+//= require ./init
 
 $(function() {
   $(document).foundation();
