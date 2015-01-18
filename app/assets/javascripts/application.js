@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require hamlcoffee
 //= require lodash
 //= require angular
 //= require angular-cache
@@ -21,7 +22,7 @@
 //= require angular-foundation
 //= require foundation
 //= require_tree ./helpers
-//= require ./init
+//= require_tree ./angular
 
 $(function() {
   $(document).foundation();

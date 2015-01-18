@@ -1,0 +1,4 @@
+%div(ng-repeat='post in postsCtrl.posts')
+  %h3 {{ post.title }}
+  %span {{ post.author }}
+  %p {{ post.body }}
