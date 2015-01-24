@@ -26,7 +26,10 @@ app.directive('postForm', ->
     }
 
     controller: ($scope) ->
-      $scope.addPost = (post) ->
-        $scope.posts.push(post)
+      $scope.post = {}
+
+      $scope.addPost = ->
+        $scope.posts.push($scope.post)
+        $scope.post = {}
   }
 )

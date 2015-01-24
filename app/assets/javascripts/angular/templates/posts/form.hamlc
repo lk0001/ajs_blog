@@ -1,5 +1,5 @@
-%form(ng-submit='addPost(post)')
-  %input(ng-model='post.title')
-  %input(ng-model='post.body')
-  %input(ng-model='post.author')
+%form(name='postForm' ng-submit='postForm.$valid && addPost()' novalidate)
+  %input(ng-model='post.title' required)
+  %input(ng-model='post.body' required)
+  %input(ng-model='post.author' required)
   %button(type='submit')= 'submit this post'
