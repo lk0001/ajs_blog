@@ -35,12 +35,14 @@ app.directive('postForm', ->
       posts: '='
     }
 
-    controller: ($scope) ->
+    controller: ($scope, Post) ->
       $scope.post = {}
 
       $scope.addPost = ->
-        $scope.posts.push($scope.post)
-        $scope.post = {}
-        $scope.postForm.$setPristine()
+        Post.save($scope.post, (data) ->
+          $scope.posts.push(data)
+          $scope.post = {}
+          $scope.postForm.$setPristine()
+        )
   }
 )
