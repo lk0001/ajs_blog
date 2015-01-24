@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  namespace :api do
+    resources :posts, only: %i[index]
+  end
+
   constraints format: 'html' do
     get '*path', controller: 'home', action: 'index'
   end
