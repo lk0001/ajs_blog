@@ -1,10 +1,16 @@
-app = angular.module('posts-module', [])
+app = angular.module('posts-module', [
+  'ngResource'
+])
 
-app.controller('PostsController', ($scope) ->
-  $scope.posts = [
-    {title: 'Some post', body: 'Body! body body body', author: 'Jim'},
-    {title: 'Other post', body: 'Body! body body body', author: 'Jim'}
-  ]
+app.factory('Post', ($resource) ->
+  $resource('/api/posts/:id', null, {update: {method: 'PUT'}})
+)
+
+app.controller('PostsController', ($scope, Post) ->
+  $scope.posts = []
+  Post.query((posts) ->
+    $scope.posts = posts
+  )
 )
 
 app.directive('posts', ->
@@ -31,5 +37,6 @@ app.directive('postForm', ->
       $scope.addPost = ->
         $scope.posts.push($scope.post)
         $scope.post = {}
+        $scope.postForm.$setPristine()
   }
 )
