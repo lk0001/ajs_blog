@@ -101,6 +101,9 @@ GEM
     mini_portile (0.6.0)
     minitest (5.5.1)
     multi_json (1.10.1)
+    ngannotate-rails (0.14.1)
+      execjs
+      rails (>= 3.1)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     pg (0.18.1)
@@ -235,6 +238,7 @@ DEPENDENCIES
   haml-rails
   haml_coffee_assets!
   jquery-rails
+  ngannotate-rails
   pg
   pry-rails
   quiet_assets

@@ -48,6 +48,7 @@ gem 'rails-assets-angular-ui-router'
 gem 'rails-assets-angular-resource'
 gem 'rails-assets-angular-translate'
 gem 'rails-assets-angular-foundation'
+gem 'ngannotate-rails'
 
 gem 'haml-rails'
 gem 'haml_coffee_assets', github: 'netzpirat/haml_coffee_assets'
