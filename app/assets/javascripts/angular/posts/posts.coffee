@@ -23,6 +23,16 @@ app.directive('posts', ->
   }
 )
 
+app.directive('post', ->
+  {
+    restrict: 'E',
+    template: JST['angular/templates/posts/post'],
+    scope: {
+      post: '='
+    }
+  }
+)
+
 app.directive('postForm', ->
   {
     restrict: 'E',
