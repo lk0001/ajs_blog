@@ -1,1 +1,4 @@
-app = angular.module('ajsBlog', ['posts-module'])
+app = angular.module('ajsBlog', [
+  'ui.router',
+  'posts-module'
+])
