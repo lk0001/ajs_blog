@@ -1,5 +1,6 @@
 app = angular.module('ajsBlog', [
   'ui.router',
+  'header-module',
   'posts-module'
 ])
 

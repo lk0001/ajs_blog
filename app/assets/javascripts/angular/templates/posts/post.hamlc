@@ -1,4 +1,4 @@
 %h3
-  %a{'ui-sref' => "post({id: post.id})"} {{ post.title }}
+  %a{'ui-sref' => 'root.post({id: post.id})'} {{ post.title }}
 %span {{ post.author }}
 %p {{ post.body }}

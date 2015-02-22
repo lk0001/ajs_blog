@@ -1,0 +1,4 @@
+%nav.top-bar{'data-topbar' => true}
+  %ul.title-area
+    %li.name
+      %a{'ui-sref' => 'root.posts'}= 'Home'
