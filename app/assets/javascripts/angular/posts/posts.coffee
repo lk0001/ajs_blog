@@ -6,7 +6,7 @@ app.factory('Post', ($resource) ->
   $resource('/api/posts/:id', null, {update: {method: 'PUT'}})
 )
 
-app.controller('PostsController', ($scope, Post) ->
+app.controller('PostsCtrl', ($scope, Post) ->
   $scope.posts = []
   Post.query((posts) ->
     $scope.posts = posts

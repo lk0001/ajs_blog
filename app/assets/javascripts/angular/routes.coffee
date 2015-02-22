@@ -9,7 +9,7 @@ angular.module('ajsBlog').config ($stateProvider, $urlRouterProvider) ->
       },
       views: {
         body: {
-          controller: 'PostsController',
+          controller: 'PostsCtrl',
           template: JST['angular/templates/posts/posts']
         }
       }
