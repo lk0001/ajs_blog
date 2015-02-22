@@ -13,6 +13,13 @@ app.controller('PostsCtrl', ($scope, Post) ->
   )
 )
 
+app.controller('PostCtrl', ($scope, $stateParams, Post) ->
+  $scope.post = {}
+  Post.get(id: $stateParams.id, (post) ->
+    $scope.post = post
+  )
+)
+
 app.directive('posts', ->
   {
     restrict: 'E',

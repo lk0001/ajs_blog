@@ -2,7 +2,7 @@ angular.module('ajsBlog').config ($stateProvider, $urlRouterProvider) ->
   $urlRouterProvider.otherwise('/')
 
   $stateProvider
-    .state('home', {
+    .state('posts', {
       url: '/',
       data: {
         roles: []
@@ -11,6 +11,18 @@ angular.module('ajsBlog').config ($stateProvider, $urlRouterProvider) ->
         body: {
           controller: 'PostsCtrl',
           template: JST['angular/templates/posts/posts']
+        }
+      }
+    })
+    .state('post', {
+      url: '/posts/:id',
+      data: {
+        roles: []
+      },
+      views: {
+        body: {
+          controller: 'PostCtrl',
+          template: JST['angular/templates/posts/post']
         }
       }
     })

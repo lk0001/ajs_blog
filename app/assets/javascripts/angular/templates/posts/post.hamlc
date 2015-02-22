@@ -1,3 +1,4 @@
-%h3 {{ post.title }}
+%h3
+  %a{'ui-sref' => "post({id: post.id})"} {{ post.title }}
 %span {{ post.author }}
 %p {{ post.body }}

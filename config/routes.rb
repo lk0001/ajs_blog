@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   namespace :api do
-    resources :posts, only: %i[index create]
+    resources :posts, only: %i[index show create]
   end
 
   constraints format: 'html' do

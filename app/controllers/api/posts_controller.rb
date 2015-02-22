@@ -3,6 +3,10 @@ class Api::PostsController < ApplicationController
     render json: Post.all
   end
 
+  def show
+    render json: Post.find(params[:id])
+  end
+
   def create
     post = Post.new(post_params)
     if post.save
