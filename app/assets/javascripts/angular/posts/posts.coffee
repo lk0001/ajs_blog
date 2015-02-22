@@ -2,9 +2,13 @@ app = angular.module('posts-module', [
   'ngResource'
 ])
 
+# # # FACTORIES # # #
+
 app.factory('Post', ($resource) ->
   $resource('/api/posts/:id', null, {update: {method: 'PUT'}})
 )
+
+# # # CONTROLLERS # # #
 
 app.controller('PostsCtrl', ($scope, Post) ->
   $scope.posts = []
@@ -19,6 +23,8 @@ app.controller('PostCtrl', ($scope, $stateParams, Post) ->
     $scope.post = post
   )
 )
+
+# # # DIRECTIVES # # #
 
 app.directive('posts', ->
   {
