@@ -1,0 +1,4 @@
+%form(name='commentForm' ng-submit='commentForm.$valid && addComment()' novalidate)
+  %input(ng-model='comment.body' required)
+  %input(ng-model='comment.author' required)
+  %button(type='submit')= 'submit this comment'

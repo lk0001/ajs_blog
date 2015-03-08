@@ -1,0 +1,2 @@
+%p {{ comment.body }}
+%span {{ comment.author }}

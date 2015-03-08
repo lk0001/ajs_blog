@@ -1,0 +1,2 @@
+%comments{'comments' => 'comments'}
+%comment-form{'comments' => 'comments', 'post-id' => 'postId'}

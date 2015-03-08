@@ -1,5 +1,6 @@
 app = angular.module('posts-module', [
-  'ngResource'
+  'ngResource',
+  'comments-module'
 ])
 
 # # # FACTORIES # # #
@@ -18,7 +19,7 @@ app.controller('PostsCtrl', ($scope, Post) ->
 )
 
 app.controller('PostCtrl', ($scope, $stateParams, Post) ->
-  $scope.post = {}
+  $scope.post = {id: $stateParams.id}
   Post.get(id: $stateParams.id, (post) ->
     $scope.post = post
   )

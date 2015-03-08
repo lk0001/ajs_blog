@@ -1,0 +1,8 @@
+%h3
+  %a{'ui-sref' => 'root.post({id: post.id})'} {{ post.title }}
+%span {{ post.author }}
+%p {{ post.body }}
+
+%hr
+Comments:
+%comments-layout{'post-id' => 'post.id'}
