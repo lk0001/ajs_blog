@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :posts, only: %i[index show create]
+    resources :comments, only: %i[index create]
   end
 
   constraints format: 'html' do
